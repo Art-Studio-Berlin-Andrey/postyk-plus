@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postyk</title>
+    <link rel="stylesheet" href="styls/style.css">
+    <link rel="stylesheet" href="styls/style2.css">
+    <!--link rel="stylesheet" href="styls/style3.css"-->
+
+</head>
+<body>
+<header>
+  <h1 id = "h11">Postyk</h1>
+  <p id = "p11">программа для создания постов</p>
+ <hr>
+ <h3>Панель инструментов</h3>
+ <p>нажмите на инструмент, чтобы открыть или закрыть</p>
+
+ <!--Ксерос1-->     
+  
+ <div class="dropdown4">
+  <button onclick="myFunction4()" class="dropbtn4">&#127744;</button>
+  <div id="myDropdown4" class="dropdown-content4">
+    <div class="choices">
+      <div class="file">
+        <!--hr>
+        <p>Инструмент:</p-->
+        <hr>
+        <p>"Эффект Ксерокс-1"</p>
+        <hr>
+       <p> для .jpg,.jpeg,.png,.gif  - файлов в .svg</p>
+        <hr>
+        <input type="file" id="upload" multiple="multiple" accept=".jpg,.jpeg,.png,.gif,.svg" />
+      </div>
+  
+     <hr>
+      <button id="cl"onclick="createText()" >Загрузить в постер</button>
+    </div>
+    <div id="output"></div>
+  </div>
+</div>      
+
+<!--Цвет фона-->
+
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">&#127912</button>
+            <div id="myDropdown" class="dropdown-content">
+              <hr>
+              <p>Инструмент:</p>
+              
+              <p>"Поменять Фон"</p>
+              <hr>
+              <input type="color" onclick="createBodyBackground()" id="outBackground" name="favcolor" value="#DEB887">
+              <hr>
+
+              <button type="button" onclick="createBodyBackground()">Поменять Фон</button>
+              <hr>
+            </div>
+          </div>
+        
+
+        
+<!--Ввод Текста-->
+            <div class="dropdown1">
+                <button onclick="myFunction1()" class="dropbtn1">✍️Т</button>
+                <div id="myDropdown1" class="dropdown-content1">
+                  <hr>
+                  <p>Инструмент:</p>
+                  
+                  <p>"Ввод текста/разметки"</p>
+                  <hr>
+                    <p>для SVG, HTML, TXT - файлы</p>
+                     <hr>
+                     <input id="text1" type="file">
+                     <hr>
+                     <input id="save" type="button" value="Сохранить на Диск">
+                     <hr>
+                    <textarea type='text'  onclick="createText()" id="text" style="width:200px; height:100px;">
+
+
+                    </textarea> 
+                     <hr>
+                     <button type="button" onclick="createText()">Ввод</button>
+                     <hr>
+                     
+                </div>
+              </div>
+
+
+
+        
+  <!--Размер Текста-->      
+
+            <div class="dropdown2">
+                <button onclick="myFunction2()" class="dropbtn2">↕️Т</button>
+                <div id="myDropdown2" class="dropdown-content2">
+                  <hr>
+                  <p>Инструмент:</p>
+                  
+                  <p>"Поменять размер текста"</p>
+                  <hr>
+                  <input type="range" min="0" name="a" max="200" value="10" step="10" id="font size" onclick="createText()">
+                  <hr>
+                  <button type="button" onclick="createText1()">Поменять размер текста</button>
+                  <hr> 
+                </div>
+              </div>
+
+
+        
+  <!--Цвет Текста-->
+
+            <div class="dropdown3">
+            <button onclick="myFunction3()" class="dropbtn3">&#127912T</button>
+            <div id="myDropdown3" class="dropdown-content3">
+              <hr>
+              <p>Инструмент:</p>
+              
+              <p>"Поменять Цвет текста"</p>
+              <hr>
+              <input type="color" id="colorText" name="favcolor" value="#000" onclick="createText()">
+               <hr>
+               <button type="button" onclick="createText1()">Цвет текста</button>
+               <hr>
+            </div>
+          </div><br><hr>
+
+  <!--Pixel-->
+
+  <div class="dropdown5">
+    <button onclick="myFunction5()" class="dropbtn5">&#128162;</button>
+    <div id="myDropdown5" class="dropdown-content5">
+      <iframe src="https://art-studio-berlin-andrey.github.io/lybPixel/" frameborder="0"></iframe>
+       <hr>
+    </div>
+  </div>
+
+  <!--Matrix print-->
+
+  <div class="dropdown6">
+    <button onclick="myFunction6()" class="dropbtn6">&#128221;</button>
+    <div id="myDropdown6" class="dropdown-content6">
+      <iframe src="https://art-studio-berlin-andrey.github.io/lybMatPrint/" frameborder="0"></iframe>
+       <hr>
+    </div>
+  </div>
+
+        
+<hr>
+</header>
+<section id = "section">
+<div id ="out" onclick="capture()" >
+
+<p id="inText"></p>
+<p id ='p1'>©Postyk:)</p>
+
+</div>
+
+        
+
+
+    
+<hr>
+<!--Скриншот-->
+
+<!--div class="dropdown5">
+  <button onclick="myFunction5()" class="dropbtn5">&#128190;&#9997;</button>
+  <div id="myDropdown5" class="dropdown-content5">
+    <hr>
+    <p>Инструмент:</p>
+    <hr>
+    <p>"Сохранить пост"</p>
+    <hr>
+     <p>Сохранить пост и отправьте другу:)</p-->
+    <hr>
+    <button onclick="capture()">
+      &#128190;&#9997;
+    </button>
+     <hr>
+  <!--/div>
+</div-->
+
+      
+<hr>
+
+</section>
+<footer>
+ <ul>
+  
+
+    <li><a href="https://art-studio-berlin-andrey.github.io">&#127968</a></li>
+    <li><a href="https://art-studio-berlin-andrey.github.io/contact.html">Контакты</a></li>
+    <li><a href="https://art-studio-berlin-andrey.github.io/about.html">Обо Мне</a></li>
+    <li><p id="art"><br>арт-студия Берлина Андрея</p></li>
+
+</ul>
+
+  
+
+</footer>
+    
+
+
+    
+</body>
+<script src="scripts/main.js"></script>
+<script src='scripts/lybSvg0.js'></script>
+
+<!--script src='epmrgO.js'></script-->
+<script  src="scripts/forSvg0.js"></script>
+<script src='scripts/html2canvas.min.js'></script>
+<script  src="scripts/scrinshot-script.js"></script>  
+
+</html>
