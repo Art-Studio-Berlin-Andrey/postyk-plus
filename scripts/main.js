@@ -45,6 +45,11 @@ function myFunction6() {
 		
 }
 
+function myFunction7() {
+  
+	document.getElementById("myDropdown7").classList.toggle("show7");
+		
+}
 
 
   
@@ -154,7 +159,18 @@ toggle between hiding and showing the dropdown content */
 		}
 	  }
 
-
+    if (!event.target.matches('.dropbtn7')) {
+		var dropdowns7 = document.getElementsByClassName("dropdown-content7");
+		var i;
+		for (i = 0; i < dropdowns7.length; i++) {
+		  var openDropdown7 = dropdowns7[i];
+  
+  
+		if (!openDropdown7.classList.contains('show7')) {
+			openDropdown7.classList.remove('show7');
+		  }
+		}
+	  }
 
   }
 
